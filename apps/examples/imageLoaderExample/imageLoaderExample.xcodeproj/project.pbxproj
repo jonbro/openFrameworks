@@ -465,7 +465,14 @@
 			isa = PBXProject;
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "imageLoaderExample" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = E4B69B4A0A3A1720003C02F2;
 			productRefGroup = E4B69B4A0A3A1720003C02F2;
 			projectDirPath = "";
@@ -565,7 +572,10 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/examples/imageLoaderExample/imageLoaderExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/examples/imageLoaderExample/imageLoaderExample.xcodeproj/project.pbxproj
 			};
 			name = ReleaseUniversal;
 		};
@@ -649,7 +659,10 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/examples/imageLoaderExample/imageLoaderExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/examples/imageLoaderExample/imageLoaderExample.xcodeproj/project.pbxproj
 			};
 			name = Debug;
 		};
@@ -686,7 +699,10 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/examples/imageLoaderExample/imageLoaderExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/examples/imageLoaderExample/imageLoaderExample.xcodeproj/project.pbxproj
 			};
 			name = Release;
 		};

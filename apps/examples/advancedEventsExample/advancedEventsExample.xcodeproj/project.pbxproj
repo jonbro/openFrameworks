@@ -567,7 +567,11 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/examples/advancedEventsExample/advancedEventsExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+				 
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/examples/advancedEventsExample/advancedEventsExample.xcodeproj/project.pbxproj
 			};
 			name = ReleaseUniversal;
 		};
@@ -651,7 +655,11 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/examples/advancedEventsExample/advancedEventsExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+				 
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/examples/advancedEventsExample/advancedEventsExample.xcodeproj/project.pbxproj
 			};
 			name = Debug;
 		};
@@ -688,7 +696,11 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/examples/advancedEventsExample/advancedEventsExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+				 
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/examples/advancedEventsExample/advancedEventsExample.xcodeproj/project.pbxproj
 			};
 			name = Release;
 		};

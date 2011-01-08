@@ -600,7 +600,11 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/addonsExamples/threadExample/threadExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+				 
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/addonsExamples/threadExample/threadExample.xcodeproj/project.pbxproj
 			};
 			name = ReleaseUniversal;
 		};
@@ -691,7 +695,11 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/addonsExamples/threadExample/threadExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+				 
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/addonsExamples/threadExample/threadExample.xcodeproj/project.pbxproj
 			};
 			name = Debug;
 		};
@@ -728,7 +736,11 @@
 					"-lpthread",
 				);
 				OTHER_LDFLAGS = "";
+<<<<<<< HEAD:apps/addonsExamples/threadExample/threadExample.xcodeproj/project.pbxproj
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+=======
+				 
+>>>>>>> 5768292f086dbe52bbd1b667d76705252ee2e391:apps/addonsExamples/threadExample/threadExample.xcodeproj/project.pbxproj
 			};
 			name = Release;
 		};
