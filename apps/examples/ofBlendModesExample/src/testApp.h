@@ -21,7 +21,7 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		
     
-        int blendMode;
+        ofBlendMode blendMode;
         ofImage rainbow;
         float           alpha;
 		float 			counter;
