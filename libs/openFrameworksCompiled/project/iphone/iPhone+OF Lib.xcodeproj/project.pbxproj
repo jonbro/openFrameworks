@@ -294,7 +294,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB24DED610DA7A3F00E9C588 /* libofxiPhone_iphonesimulator_Release.a */,
+				BB24DED610DA7A3F00E9C588 /* libofxiPhone_iphoneos_Debug.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -786,7 +786,7 @@
 			);
 			name = "iPhone+OF Static Library";
 			productName = "Static Library";
-			productReference = BB24DED610DA7A3F00E9C588 /* libofxiPhone_iphonesimulator_Release.a */;
+			productReference = BB24DED610DA7A3F00E9C588 /* libofxiPhone_iphoneos_Debug.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
