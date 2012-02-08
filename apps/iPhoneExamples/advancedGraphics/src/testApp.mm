@@ -184,7 +184,7 @@ void testApp::draw(){
 	// because it is using glDrawPixels which varies in
 	// speed from system to system.  try using ofTrueTypeFont
 	// if this bitMap type slows you down.
-	ofSetColor(0xFFFFFF);
+	ofSetHexColor(0xFFFFFF);
 	ofDrawBitmapString("this is a Lissajous curve", 190, 500);
 	ofDrawBitmapString("move mouse to spin me", 670, 500);
 
@@ -197,7 +197,7 @@ void testApp::touchDown(ofTouchEventArgs &touch){
 
 //--------------------------------------------------------------
 void testApp::touchMoved(ofTouchEventArgs &touch){
-	
+	NSLog(@"touch moved: %f, %f", touch.x, touch.y);
 	if( touch.id ==  0){
 	//update spinPct by the distance the mouse
 	//moved in x and y. We use abs so it always

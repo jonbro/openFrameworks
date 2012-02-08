@@ -1,3 +1,4 @@
+    
 /***********************************************************************
  
  Copyright (c) 2009
@@ -48,7 +49,9 @@ static inline void checkSoundStreamIsRunning() {
 
 bool checkStatus(OSStatus err) {
 	if(err!=noErr) {
-		ofLog(OF_LOG_ERROR, "There was an error: " + err);
+        NSLog(@"There was an error: %@", err);
+//        cout << "There was an error: " << err << endl;
+//		ofLog(OF_LOG_ERROR, "There was an error: " + err);
 		//		soundInputPtr->error(err);
 		return true;
 	}
@@ -139,7 +142,6 @@ static OSStatus recordingCallback(void *inRefCon,
 		}
 		done = true;
 		if(soundInputPtr!=NULL) soundInputPtr->audioReceived(tempBuffer, ioData->mBuffers[i].mDataByteSize/2, 1);
-		
 	}
 	return noErr;
 }
@@ -193,6 +195,10 @@ bool ofxiPhoneSoundStream::setup(int outChannels, int inChannels, int _sampleRat
 	if(checkStatus(status)) {
 		ofLog(OF_LOG_ERROR, "couldn't initialize audio session");
 	}
+    // should set it such that audio continues even when the ipod is playing
+    UInt32 audioCategory = kAudioSessionCategory_AmbientSound;
+    status = AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(audioCategory), &audioCategory);
+
 	status = AudioSessionSetActive(true);
 	if(checkStatus(status)) {
 		ofLog(OF_LOG_ERROR, "couldn't set audio session active");
@@ -225,17 +231,25 @@ bool ofxiPhoneSoundStream::setup(int outChannels, int inChannels, int _sampleRat
 	UInt32 flag = 1;
 	
 	checkStatus(status);
-	
+        
+    if(checkStatus(status)){
+        ofLog(OF_LOG_ERROR,  "couldn't set audio category");
+    }
+    
 	// this is supposed to make the audio come out of the speaker rather
 	// than the receiver, but I don't think it works when using the microphone as well.
 	//	UInt32 category = kAudioSessionOverrideAudioRoute_Speaker;
 	//	AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(category), &category);
+
 	
 	UInt32 category = 1;
+    
 	AudioSessionSetProperty(kAudioSessionOverrideAudioRoute_Speaker, sizeof(category), &category);
+
+//	AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryMixWithOthers, sizeof (UInt32), &category);
 	
-	
-	// Describe format
+
+    // Describe format
 	audioFormat.mSampleRate			= (double)sampleRate;
 	audioFormat.mFormatID			= kAudioFormatLinearPCM;
 	audioFormat.mFormatFlags		= kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;

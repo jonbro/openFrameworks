@@ -201,9 +201,7 @@ ofTexture * ofiPhoneVideoPlayer::getTexture()
 		CVPixelBufferLockBaseAddress(imageBuffer,0); 
 
 		uint8_t *bufferPixels = (uint8_t *)CVPixelBufferGetBaseAddress(imageBuffer); 
-		
 		if(width != min(size_t(1024),CVPixelBufferGetWidth(imageBuffer))) {
-			
 			if(videoTexture.bAllocated())
 				videoTexture.clear();
 				
@@ -226,11 +224,12 @@ ofTexture * ofiPhoneVideoPlayer::getTexture()
 			videoTexture.allocate(width, height, GL_RGBA);
 		}
 		
-		videoTexture.loadData(bufferPixels, width, height, GL_BGRA);
+		videoTexture.loadData(bufferPixels, width, height, GL_RGBA);
 		
 		// unlock the image buffer
 		CVPixelBufferUnlockBaseAddress(imageBuffer,0);
-		
+		cout << "returning texture" << endl;
+        
 		return &videoTexture;
 	}
 	

@@ -8,10 +8,10 @@ void testApp::setup(){
 	ofEnableAlphaBlending();
 	ofSetLogLevel(OF_LOG_VERBOSE);
 		
-	mesh.vertexData = new ofVertexData();
-	mesh.setDrawType(GL_STREAM_DRAW_ARB);
-	mesh.bEnableIndices = false;
-	mesh.vertexData->setMode(OF_TRIANGLE_STRIP_MODE);
+	//mesh.vertexData = new ofVertexData();
+	//mesh.setDrawType(GL_STREAM_DRAW_ARB);
+	//mesh.bEnableIndices = false;
+	//mesh.vertexData->setMode(OF_TRIANGLE_STRIP_MODE);
 	
 	glPointSize(3);
 	ofSetLineWidth(3);
@@ -41,7 +41,7 @@ void testApp::keyPressed(int key){
 	}
 	
 	if (key == 'c'){
-		mesh.vertexData->clear();
+		mesh.clear();
 	}
 }
 
@@ -66,8 +66,8 @@ void testApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-	mesh.vertexData->addVertex(ofVec3f(x,y,0));
-	mesh.vertexData->addIndex(mesh.vertexData->getNumVertices()-1);
+	mesh.addVertex(ofVec3f(x,y,0));
+	mesh.addIndex(mesh.getNumVertices()-1);
 }
 
 //--------------------------------------------------------------

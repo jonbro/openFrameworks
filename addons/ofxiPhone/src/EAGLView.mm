@@ -170,8 +170,7 @@
 		int touchIndex = [[activeTouches objectForKey:[NSValue valueWithPointer:touch]] intValue];
 		//		[activeTouches setObject:[NSNumber numberWithInt:touchIndex] forKey:[NSValue valueWithPointer:touch]];
 		
-		CGPoint touchPoint = [touch locationInView:self];
-		
+		CGPoint touchPoint = [touch locationInView:nil];
 		touchPoint.x*=touchScaleFactor; // this has to be done because retina still returns points in 320x240 but with high percision
 		touchPoint.y*=touchScaleFactor;
 		

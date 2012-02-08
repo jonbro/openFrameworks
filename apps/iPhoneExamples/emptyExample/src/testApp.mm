@@ -39,7 +39,7 @@ void testApp::touchDown(ofTouchEventArgs &touch){
 
 //--------------------------------------------------------------
 void testApp::touchMoved(ofTouchEventArgs &touch){
-
+    NSLog(@"Touch Moved: %f, %f", touch.x, touch.y);
 }
 
 //--------------------------------------------------------------

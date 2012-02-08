@@ -1,4 +1,4 @@
-#include "ofLog.h"
+//#include "ofLog.h"
 #include "ofConstants.h"
 #include <ofUtils.h>
 #include <map>
@@ -212,7 +212,7 @@ void ofConsoleLoggerChannel::log(ofLogLevel logLevel, const string & module, con
 	}else{
 		fprintf(stderr,"%s: ", module.c_str());
 		fprintf(stderr,"%s: ", ofGetLogLevelName(logLevel).c_str());
-		vfprintf( stderr, format, args );
+		fprintf( stderr, format, args );
 		fprintf(stderr,"\n");
 	}
 }

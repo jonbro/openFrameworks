@@ -56,13 +56,13 @@ public:
 	void firstFrame();
 	void nextFrame();
 	void previousFrame();*/
+	void * videoPlayer; // super hack to forward declare an objective c class inside a header file that can only handle c classes.
 	
 protected:
 	
 	void initWithPath(string path);
 	void updateCurrentFrameRef();
 	
-	void * videoPlayer; // super hack to forward declare an objective c class inside a header file that can only handle c classes.
 	
 	string videoPath;	
 	bool videoWasStopped;

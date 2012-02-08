@@ -220,6 +220,9 @@ void ofxiPhoneKeyboard::updateOrientation()
 		[_textField setTextColor:[UIColor whiteColor]];
 		[_textField setFont:[UIFont fontWithName:@"Helvetica" size:16]];
 		[_textField setPlaceholder:@""];	
+
+		//_textField.keyboardType = UIKeyboardTypeNumberPad;
+		//_textField.keyboardAppearance = UIKeyboardAppearanceAlert;
 		
 		_x=x;
 		_y=y;
@@ -238,12 +241,12 @@ void ofxiPhoneKeyboard::updateOrientation()
 	switch (ofxiPhoneGetOrientation()) 
 	{
 		case OFXIPHONE_ORIENTATION_LANDSCAPE_LEFT:
-			_textField.transform = CGAffineTransformMakeRotation(-M_PI_2);
+			_textField.transform = CGAffineTransformMakeRotation(M_PI_2);
 			break;
 			
 		case OFXIPHONE_ORIENTATION_LANDSCAPE_RIGHT:
 			
-			_textField.transform = CGAffineTransformMakeRotation(M_PI_2);
+			_textField.transform = CGAffineTransformMakeRotation(-M_PI_2);
 			break;
 			
 		case OFXIPHONE_ORIENTATION_PORTRAIT:
