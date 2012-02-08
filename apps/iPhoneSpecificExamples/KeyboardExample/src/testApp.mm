@@ -86,6 +86,8 @@ void testApp::gotMemoryWarning(){
 
 //--------------------------------------------------------------
 void testApp::deviceOrientationChanged(int newOrientation){
+    ofxiPhoneSetOrientation((ofOrientation)newOrientation);
+    keyboard->updateOrientation();
 }
 
 
