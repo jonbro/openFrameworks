@@ -1,4 +1,5 @@
-    
+
+
 /***********************************************************************
  
  Copyright (c) 2009
@@ -73,7 +74,7 @@ static OSStatus playbackCallback(void *inRefCon,
 	
 	//	soundInputPtr->error(ioData->mNumberBuffers);
 	for(int i = 0; i < ioData->mNumberBuffers; i++) {
-		
+    
 		if(i==0) { // there should be only one buffer
 			short int *buffer = (short int *)ioData->mBuffers[i].mData;
 			
