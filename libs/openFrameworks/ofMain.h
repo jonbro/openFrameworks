@@ -66,8 +66,8 @@
 
 //--------------------------
 // video
-#include "ofVideoGrabber.h"
-#include "ofVideoPlayer.h"
+// #include "ofVideoGrabber.h"
+// #include "ofVideoPlayer.h"
 
 //--------------------------
 // events
