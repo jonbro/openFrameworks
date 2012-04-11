@@ -959,7 +959,7 @@
 			buildSettings = {
 				ARCHS = (
 					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
+					armv7,
 				);
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../lib/iphone/";
 				COPY_PHASE_STRIP = NO;
@@ -969,7 +969,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/kiss/lib/linux\"",
@@ -988,7 +988,7 @@
 			buildSettings = {
 				ARCHS = (
 					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
+					armv7,
 				);
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../lib/iphone/";
 				COPY_PHASE_STRIP = YES;
@@ -998,7 +998,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/kiss/lib/linux\"",
