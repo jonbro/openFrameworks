@@ -82,7 +82,8 @@ static OSStatus playbackCallback(void *inRefCon,
 								 AudioBufferList *ioData) {
 	if(soundInputPtr == NULL)
 		return noErr;
-	
+	if(soundOutputPtr == NULL)
+        return noErr;
 	for(int i = 0; i < ioData->mNumberBuffers; i++) {
 		
 		short int *buffer = (short int *)ioData->mBuffers[i].mData;
