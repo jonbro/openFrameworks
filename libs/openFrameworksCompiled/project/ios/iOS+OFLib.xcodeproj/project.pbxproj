@@ -1008,10 +1008,12 @@
 					"\"$(SRCROOT)/../../../tess2/lib/ios\"",
 					"\"$(SRCROOT)/../../../poco/lib/ios\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = "ofxiPhone_${PLATFORM_NAME}_Debug";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -1033,10 +1035,12 @@
 					"\"$(SRCROOT)/../../../tess2/lib/ios\"",
 					"\"$(SRCROOT)/../../../poco/lib/ios\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = "ofxiPhone_${PLATFORM_NAME}_Release";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = armv7;
 				ZERO_LINK = NO;
 			};
 			name = Release;
