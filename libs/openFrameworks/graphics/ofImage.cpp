@@ -141,7 +141,7 @@ FIBITMAP* getBmpFromPixels(ofPixels_<PixelType> &pix){
 
 //----------------------------------------------------
 template<typename PixelType>
-void putBmpIntoPixels(FIBITMAP * bmp, ofPixels_<PixelType> &pix, bool swapForLittleEndian = true) {
+void putBmpIntoPixels(FIBITMAP * bmp, ofPixels_<PixelType> &pix, bool swapForLittleEndian) {
 	// some images use a palette, or <8 bpp, so convert them to raster 8-bit channels
 	FIBITMAP* bmpConverted = NULL;
 	if(FreeImage_GetColorType(bmp) == FIC_PALETTE || FreeImage_GetBPP(bmp) < 8) {

@@ -94,7 +94,7 @@ static OSStatus playbackCallback(void *inRefCon,
 				buffer[j] = 0;
 			}
 		}
-		else {
+            else {
 			// get floats from app
 			soundOutputPtr->audioOut(scaleBuffer,
 				ioData->mBuffers[i].mDataByteSize/(ioData->mBuffers[i].mNumberChannels*2),
@@ -107,7 +107,6 @@ static OSStatus playbackCallback(void *inRefCon,
 			}
 		}
 	}
-	
     return noErr;
 }
 

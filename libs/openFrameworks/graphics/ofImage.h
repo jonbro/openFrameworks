@@ -6,6 +6,7 @@
 #include "ofPixels.h"
 #include "ofBaseTypes.h"
 #include "ofConstants.h"
+class FIBITMAP;
 
 enum ofImageQualityType {
 	OF_IMAGE_QUALITY_BEST,
@@ -246,3 +247,6 @@ void ofImage_<PixelType>::clone(const ofImage_<SrcType> &mom){
 
 	update();
 }
+
+template<typename PixelType>
+void putBmpIntoPixels(FIBITMAP * bmp, ofPixels_<PixelType> &pix, bool swapForLittleEndian = true);

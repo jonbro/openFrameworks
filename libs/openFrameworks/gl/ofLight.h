@@ -80,7 +80,6 @@ public:
 	
 	// this method overrides ofNode to catch the changes and update glLightv(GL_POSITION)
 private:
-
 	ofFloatColor ambientColor;
 	ofFloatColor diffuseColor;
 	ofFloatColor specularColor;

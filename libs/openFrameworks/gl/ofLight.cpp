@@ -211,7 +211,7 @@ void ofLight::setup() {
 void ofLight::enable() {
     setup();
     onPositionChanged(); // update the position // 
-	ofEnableLighting();
+    ofEnableLighting();
 	glEnable(GL_LIGHT0 + glIndex);
 }
 

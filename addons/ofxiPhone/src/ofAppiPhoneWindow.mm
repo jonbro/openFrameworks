@@ -116,6 +116,7 @@ void ofAppiPhoneWindow::startAppWithDelegate(string appDelegateClassName) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     UIApplicationMain(nil, nil, nil, ofxStringToNSString(appDelegateClassName));
+//    UIApplicationMain(nil, nil, nil, @"ofxiPhoneAppDelegate");
     [pool release];
 }
 
