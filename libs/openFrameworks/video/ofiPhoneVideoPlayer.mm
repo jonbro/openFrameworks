@@ -39,7 +39,7 @@ bool ofiPhoneVideoPlayer::loadMovie(string name) {
 	
 	videoPath = name;
 	initWithPath(videoPath);
-    
+    /*
 #ifdef __IPHONE_5_0
     CVReturn err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, 
                                                 NULL, 
@@ -50,7 +50,7 @@ bool ofiPhoneVideoPlayer::loadMovie(string name) {
         NSLog(@"Error at CVOpenGLESTextureCacheCreate %d", err);
     }    
 #endif
-	
+	*/
 	if(videoPlayer != NULL)
 		if(! [(AVFoundationVideoPlayer *)videoPlayer isInErrorState])
 			return true;

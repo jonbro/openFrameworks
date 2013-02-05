@@ -1001,6 +1001,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/kiss/lib/linux\"",
@@ -1009,6 +1010,7 @@
 					"\"$(SRCROOT)/../../../poco/lib/ios\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(OF_CORE_LIBS)";
 				PREBINDING = NO;
 				PRODUCT_NAME = "ofxiPhone_${PLATFORM_NAME}_Debug";
 				SDKROOT = iphoneos;
@@ -1028,6 +1030,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/kiss/lib/linux\"",
@@ -1036,6 +1039,7 @@
 					"\"$(SRCROOT)/../../../poco/lib/ios\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(OF_CORE_LIBS)";
 				PREBINDING = NO;
 				PRODUCT_NAME = "ofxiPhone_${PLATFORM_NAME}_Release";
 				SDKROOT = iphoneos;
@@ -1053,6 +1057,7 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../lib/ios/";
 				CONFIGURATION_TEMP_DIR = "$(SRCROOT)/../../lib/ios/build/debug/";
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OBJROOT = "$(SRCROOT)/../../lib/ios/build/debug";
 				SDKROOT = iphoneos;
 				SYMROOT = "$(SRCROOT)/../../lib/ios/";
@@ -1071,6 +1076,7 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../lib/ios/";
 				CONFIGURATION_TEMP_DIR = "$(SRCROOT)/../../lib/ios/build/release/";
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OBJROOT = "$(SRCROOT)/../../lib/ios/build/release";
 				SDKROOT = iphoneos;
 				SYMROOT = "$(SRCROOT)/../../lib/ios/";

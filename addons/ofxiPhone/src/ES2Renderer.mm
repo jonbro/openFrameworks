@@ -13,6 +13,7 @@ GLint uniforms[NUM_UNIFORMS];
 enum {
     ATTRIB_VERTEX,
     ATTRIB_COLOR,
+    ATTRIB_TEX_COORD,
     NUM_ATTRIBUTES
 };
 
@@ -74,7 +75,7 @@ enum {
     // This call is redundant, but needed if dealing with multiple framebuffers.
     glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
     // Use shader program
-    glUseProgram(program);
+//    glUseProgram(program);
 	
 	
 }
@@ -93,7 +94,7 @@ enum {
 #endif
 
     // Draw
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
     // This application only creates a single color renderbuffer which is already bound at this point.
     // This call is redundant, but needed if dealing with multiple renderbuffers.
@@ -116,8 +117,10 @@ enum {
     *shader = glCreateShader(type);
     glShaderSource(*shader, 1, &source, NULL);
     glCompileShader(*shader);
+    GLint err;
+    err = glGetError();
+    printf("%i", err);
 
-#if defined(DEBUG)
     GLint logLength;
     glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
     if (logLength > 0)
@@ -127,7 +130,6 @@ enum {
         NSLog(@"Shader compile log:\n%s", log);
         free(log);
     }
-#endif
 
     glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
     if (status == 0)
@@ -145,7 +147,6 @@ enum {
 
     glLinkProgram(prog);
 
-#if defined(DEBUG)
     GLint logLength;
     glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
     if (logLength > 0)
@@ -155,7 +156,6 @@ enum {
         NSLog(@"Program link log:\n%s", log);
         free(log);
     }
-#endif
 
     glGetProgramiv(prog, GL_LINK_STATUS, &status);
     if (status == 0)
@@ -194,7 +194,7 @@ enum {
     program = glCreateProgram();
 
     // Create and compile vertex shader
-    vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
+    vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vert"];
     if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
     {
         NSLog(@"Failed to compile vertex shader");
@@ -202,7 +202,7 @@ enum {
     }
 
     // Create and compile fragment shader
-    fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
+    fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"frag"];
     if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
     {
         NSLog(@"Failed to compile fragment shader");
@@ -219,6 +219,9 @@ enum {
     // this needs to be done prior to linking
     glBindAttribLocation(program, ATTRIB_VERTEX, "position");
     glBindAttribLocation(program, ATTRIB_COLOR, "color");
+    glBindAttribLocation(program, ATTRIB_TEX_COORD, "TexCoordIn");
+//    GLuint _textureUniform = glGetUniformLocation(program, "Texture");
+//    glUniform1i(_textureUniform, 0);
 
     // Link program
     if (![self linkProgram:program])

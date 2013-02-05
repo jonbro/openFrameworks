@@ -1,4 +1,4 @@
-/***********************************************************************
+ /***********************************************************************
  
  Copyright (c) 2008, 2009, Memo Akten, www.memo.tv
  *** The Mega Super Awesome Visuals Company ***
@@ -113,10 +113,11 @@ void ofAppiPhoneWindow::startAppWithDelegate(string appDelegateClassName) {
         return;
     
     bAppCreated = true;
-    
+
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    UIApplicationMain(nil, nil, nil, ofxStringToNSString(appDelegateClassName));
-//    UIApplicationMain(nil, nil, nil, @"ofxiPhoneAppDelegate");
+    
+//    UIApplicationMain(nil, nil, nil, ofxStringToNSString(appDelegateClassName));
+    UIApplicationMain(nil, nil, nil, [[[NSString alloc] initWithCString: appDelegateClassName.c_str()] autorelease]);
     [pool release];
 }
 

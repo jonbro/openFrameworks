@@ -140,7 +140,7 @@ ofQuickTimePlayer::~ofQuickTimePlayer(){
 	#ifdef OF_VIDEO_PLAYER_QUICKTIME
 	//--------------------------------------
 		if(allocated)	delete[] offscreenGWorldPixels;
-		if ((offscreenGWorld)) DisposeGWorld((offscreenGWorld));
+//		if ((offscreenGWorld)) DisposeGWorld((offscreenGWorld));
 	//--------------------------------------
 	#endif
 	//--------------------------------------
@@ -256,8 +256,8 @@ void ofQuickTimePlayer::createImgMemAndGWorld(){
 		QTNewGWorldFromPtr (&(offscreenGWorld), k24RGBPixelFormat, &(movieRect), NULL, NULL, 0, (pixels.getPixels()), 3 * width);
 	#endif
 
-	LockPixels(GetGWorldPixMap(offscreenGWorld));
-	SetGWorld (offscreenGWorld, NULL);
+//	LockPixels(GetGWorldPixMap(offscreenGWorld));
+//	SetGWorld (offscreenGWorld, NULL);
 	SetMovieGWorld (moviePtr, offscreenGWorld, nil);
 
 }
@@ -302,7 +302,7 @@ bool ofQuickTimePlayer::loadMovie(string name){
 				height 	= movieRect.bottom;
 				pixels.clear();
 				delete [] offscreenGWorldPixels;
-				if ((offscreenGWorld)) DisposeGWorld((offscreenGWorld));
+//				if ((offscreenGWorld)) DisposeGWorld((offscreenGWorld));
 				createImgMemAndGWorld();
 			}
 		} else {

@@ -106,7 +106,7 @@ bool ofQuickTimeGrabber::initGrabber(int w, int h){
 		//width 		= w;
 		//height 		= h;
 
-		MacSetRect(&videoRect, 0, 0, w, h);
+//		MacSetRect(&videoRect, 0, 0, w, h);
 
 		//---------------------------------- 3 - buffer allocation
 		// Create a buffer big enough to hold the video data,
@@ -122,8 +122,8 @@ bool ofQuickTimeGrabber::initGrabber(int w, int h){
 			QTNewGWorldFromPtr (&(videogworld), k24RGBPixelFormat, &(videoRect), NULL, NULL, 0, (pixels.getPixels()), 3 * w);
 		#endif		
 		
-		LockPixels(GetGWorldPixMap(videogworld));
-		SetGWorld (videogworld, NULL);
+//		LockPixels(GetGWorldPixMap(videogworld));
+//		SetGWorld (videogworld, NULL);
 		SGSetGWorld(gSeqGrabber, videogworld, nil);
 
 		
